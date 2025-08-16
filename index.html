@@ -1,50 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>Page Title</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #475C7A;
-}
-h1 {
-  color: #ffffff;
-  text-align: center;
-}
-h2 {
-  color: #ffffff;
-  text-align: left;
-}
-p {
-  color: #ffffff;
-  text-align: center;
-}
-video {
-  align-self: center;
-}
-</style>
-</head>
-<body>
+  <head>
+    <title>Elijah Hobbs Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #000000;
+        line-height: 1.6;
+      }
+      section {
+        margin: 0 200px;
+        text-align: center;
+      }
+      h1 {
+        color: #ffffff;
+        font-size: 48px;
+        text-align: center;
+      }
+      h2 {
+        color: #ffffff;
+        font-size: 32px;
+        text-align: left;
+      }
+      p {
+        color: #ffffff;
+        font-size: 18px;
+        text-align: justify;
+      }
+      video {
+        display: block;
+        border-radius: 12px;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%
+      }
+      img {
+        display: block;
+        border-radius: 12px;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      button {
+        font-size: 14px;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+        margin: 8px;
+      }
+      hr {
+        background-color: #ffffff;
+        height: 2px;
+        border: none;
+        margin: 20px 100px;
+      }
+      a {
+        display: inline-block;
+        padding: 5px;
+        font-size: 18px;
+        background-color: #0ea050;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+        margin: 10px;
+      }
+      a:hover {
+        background-color: #00b953;
+      }
+      .slideContainer {
+        width: 100%; 
+        max-width: 720px; 
+        height: 400px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin: 0 auto
+      }
+      .slideInner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+      @media (max-width: 950px) {
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: #000000;
+        }
+        hr {
+          background-color: #ffffff;
+           height: 2px;
+          border: none;
+          margin: 20px 60px;
+        }
+        section {
+          margin: 0 100px;
+          text-align: center;
+        }
+        h1 {
+          color: #ffffff;
+          font-size: 32px;
+          text-align: center;
+        }
+        h2 {
+          color: #ffffff;
+          font-size: 24px;
+          text-align: left;
+        }
+        p {
+          color: #ffffff;
+          font-size: 14px;
+          text-align: justify;
+        }
+        button {
+          font-size: 12px;
+          border-radius: 5px;
+          border: none;
+          font-weight: bold;
+          margin: 4px;
+        }
+        a {
+          display: inline-block;
+          padding: 5px;
+          font-size: 14px;
+          background-color: #0ea050;
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: bold;
+          border-radius: 6px;
+          transition: background-color 0.3s ease;
+        }
+        a:hover {
+          background-color: #00b953;
+        }
+        .slideContainer {
+          width: 100%; 
+          max-width: 720px; 
+          height: 300px; 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          margin: 0 auto
+        }
+      }
+      @media (max-width: 600px) {
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: #000000;
+        }
+        hr {
+          background-color: #ffffff;
+           height: 2px;
+          border: none;
+          margin: 20px 30px;
+        }
+        section {
+          margin: 0 50px;
+          text-align: center;
+        }
+        h1 {
+          color: #ffffff;
+          font-size: 32px;
+          text-align: center;
+        }
+        h2 {
+          color: #ffffff;
+          font-size: 24px;
+          text-align: left;
+        }
+        p {
+          color: #ffffff;
+          font-size: 14px;
+          text-align: justify;
+        }
+        button {
+          font-size: 10px;
+          border-radius: 5px;
+          border: none;
+          font-weight: bold;
+          margin: 2px;
+        }
+        a {
+          display: inline-block;
+          padding: 5px;
+          font-size: 14px;
+          background-color: #0ea050;
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: bold;
+          border-radius: 6px;
+          transition: background-color 0.3s ease;
+        }
+        a:hover {
+          background-color: #00b953;
+        }
+        .slideContainer {
+          width: 100%; 
+          max-width: 720px; 
+          height: 200px; 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Elijah Hobbs Portfolio</h1>
+      <p style="text-align: center;">A collection of coding projects created by Elijah Hobbs</p>
+    </section>
+    <hr>
 
-<h1>Elijah Hobbs Portfolio</h1>
-<p>A collection of coding projects created by Elijah Hobbs</p>
+    <!-- NACA Airfoil Generator Section -->
+    <section>
+      <h2>NACA Airfoil Generator</h2>
+      <p>
+        This project was created in Python and the program takes in an input of a 4 digit NACA airfoil number and uses it to graph the associated airfoil.
+        A large number of points are generated based on the standard equations for the airfoil's geometry, camber line, and chord line.
+        After all of the relevant points have been generated they are plotted in a new window using PyOpenGL.
+      </p>
+      <div>
+        <div id="airfoilSlides" class="slideContainer">
+        </div>
+        <button onclick="prevSlide('airfoilSlides')">⬅ Prev</button>
+        <button onclick="nextSlide('airfoilSlides')">Next ➡</button>
+      </div>
+      <a href=https://github.com/Elijah-Hobbs/nacaAirfoilGeneratorPython>View on Github</a>
+    </section>
 
-<hr>
+    <hr>
 
-<h2>Intermediate Axis Theorem Simulation</h2>
-<p>
-  This project was created in MATLAB and shows an example 
-  of the intermediate axis theorem simulated in MATLAB. It 
-  shows how the same object will rotate stabily about its most and
-  least significant axes and rotate unstabily about its intermediate axis.
-</p>
+    <!-- Diving Physics Simulation Section -->
+    <section>
+      <h2>Diving Physics Simulation</h2>
+      <p>
+        This project was created in MATLAB and simulates how a diver moves when they are diving from a platform.
+        The simulation uses a differential equation solver in MATLAB and steps through time simulating the divers motions as they change their moment of intertia in order to flip in the air.
+        After finishing the simulation the program will create a few graphs and a short video of the dive using MATLAB's plotting functions.
+      </p>
+      <div>
+        <div id="divingSlides" class="slideContainer">
+        </div>
+        <button onclick="prevSlide('divingSlides')">⬅ Prev</button>
+        <button onclick="nextSlide('divingSlides')">Next ➡</button>
+      </div>
+      <a href=https://github.com/Elijah-Hobbs/divingPhysicsSimulator>View on Github</a>
+    </section>
 
-<video width="720" height="240" autoplay>
-  <source src="IAT_Example.mp4" type="video/mp4">
-</video> 
+    <hr>
+
+    <!-- Intemediate Axis Theorem Simulation Section -->
+    <section>
+      <h2>Intermediate Axis Theorem Simulation</h2>
+      <p>
+        This project was created in MATLAB and shows an example 
+        of the intermediate axis theorem simulated in MATLAB. It 
+        shows how the same object will rotate stably about its most and
+        least significant axes and rotate unstably about its intermediate axis.
+      </p>
+      <div>
+        <div id="iatSlides" class="slideContainer">
+        </div>
+        <button onclick="prevSlide('iatSlides')">⬅ Prev</button>
+        <button onclick="nextSlide('iatSlides')">Next ➡</button>
+      </div>
+      <a href=https://github.com/Elijah-Hobbs/intermediateAxisTheoremSimulation>View on Github</a>
+    </section>
 
 
-</body>
+    <script>
+
+      const slideData = {
+        airfoilSlides: {
+          slides: [
+            '<img src="nacaAirfoilGeneratorPython2212Image.png">',
+            '<img src="nacaAirfoilGeneratorPython0012Image.png">',
+            '<img src="nacaAirfoilGeneratorPythonCodeImage.png">'
+          ],
+          index: 0
+        },
+        divingSlides: {
+          slides: [
+            '<video controls><source src="divingSimulatorPerfectDiveVideo.mp4" type="video/mp4">Your browser does not support the video tag</video>',
+            '<video controls><source src="divingSimulator2dDiveVideo.mp4" type="video/mp4">Your browser does not support the video tag</video>',
+            '<img src="divingSimulatorAnglesGraphImage.png">'
+          ],
+          index: 0
+        },
+        iatSlides: {
+          slides: [
+            '<video controls><source src="IAT_Example.mp4" type="video/mp4">Your browser does not support the video tag</video>',
+            '<img src="intermediateAxisTheoremGraphImage.png">',
+            '<img src="intermediateAxisTheoremCodeImage.png">'
+          ],
+          index: 0
+        }
+      };
+
+      function showSlide(id) {
+        const container = document.getElementById(id);
+        const content = slideData[id].slides[slideData[id].index];
+        container.innerHTML = `<div class="slideInner">${content}</div>`;
+      }
+
+      function nextSlide(id) {
+        const data = slideData[id];
+        data.index = (data.index + 1) % data.slides.length;
+        showSlide(id)
+      }
+
+      function prevSlide(id) {
+        const data = slideData[id]
+        data.index = (data.index - 1 + data.slides.length) % data.slides.length;
+        showSlide(id)
+      }
+
+      window.onload = function () {
+        showSlide('airfoilSlides')
+        showSlide('divingSlides')
+        showSlide('iatSlides')
+      }
+    </script>
+  </body>
 </html> 

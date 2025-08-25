@@ -33,15 +33,17 @@
         display: block;
         border-radius: 12px;
         margin: auto;
-        max-width: 100%;
-        max-height: 100%
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
       }
       img {
         display: block;
         border-radius: 12px;
         margin: auto;
-        max-width: 100%;
-        max-height: 100%;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
       }
       button {
         font-size: 14px;
@@ -73,8 +75,8 @@
       }
       .slideContainer {
         width: 100%; 
-        max-width: 720px; 
-        height: 400px; 
+        max-width: 800px; 
+        height: 450px; 
         display: flex;
         align-items: center;
         justify-content: center;
@@ -221,19 +223,59 @@
     </section>
     <hr>
 
-    <!-- NACA Airfoil Generator Section -->
+    <!-- NACA Airfoil Generator Section  C++ -->
     <section>
-      <h2>NACA Airfoil Generator</h2>
+      <h2>C++ NACA Airfoil Generator</h2>
+      <p>
+        This project was created in C++ and creates a window that allows the user to input a 4 digit NACA airfoil code and view the airfoil it corresponds with.
+        The project uses GLFW to create the window, OpenGL to display the airfoil geometry within the window, and ImGUI to create UI elements and process inputs.
+        The project uses the standard NACA equations to calculate an airfoil's geometry, camber line, and chord line according to the user's inputs.
+      </p>
+      <div>
+        <div id="airfoilSlidesCpp" class="slideContainer">
+        </div>
+        <button onclick="prevSlide('airfoilSlidesCpp')">⬅ Prev</button>
+        <button onclick="nextSlide('airfoilSlidesCpp')">Next ➡</button>
+      </div>
+      <a href=https://github.com/Elijah-Hobbs/nacaAirfoilGeneratorCpp>View on Github</a>
+    </section>
+
+    <hr>
+
+    <!-- TBCC Simulator Section -->
+    <section>
+      <h2>Turbine Based Combined Cycle Jet Engine Simulation</h2>
+      <p>
+        This project was created in MATLAB and simulates a series of turbine based combined cycle jet engine with varying properties.
+        The program varies a series of critical parameters like the pressure ratio, the speed at which the engine switches from its turbojet stage to its ramjet stage, 
+        and the maximum temperature in both the turbojet and ramjet nozzles to see what values of the properties result in the most efficient engine.
+        After a simulated engine's properties are determined a cycle analysis is performed a series of efficiency characteristics like the overall efficiency and the thrust specific fuel consumption are calculated.
+        The most effient engine's properties are displayed after all engines have been analyzed.
+      </p>
+      <div>
+        <div id="tbccSlides" class="slideContainer">
+        </div>
+        <button onclick="prevSlide('tbccSlides')">⬅ Prev</button>
+        <button onclick="nextSlide('tbccSlides')">Next ➡</button>
+      </div>
+      <a href=https://github.com/Elijah-Hobbs/turbineBasedCombinedCylceSimulation>View on Github</a>
+    </section>
+
+    <hr>
+
+    <!-- NACA Airfoil Generator Section Python -->
+    <section>
+      <h2>Python NACA Airfoil Generator</h2>
       <p>
         This project was created in Python and the program takes in an input of a 4 digit NACA airfoil number and uses it to graph the associated airfoil.
         A large number of points are generated based on the standard equations for the airfoil's geometry, camber line, and chord line.
         After all of the relevant points have been generated they are plotted in a new window using PyOpenGL.
       </p>
       <div>
-        <div id="airfoilSlides" class="slideContainer">
+        <div id="airfoilSlidesPython" class="slideContainer">
         </div>
-        <button onclick="prevSlide('airfoilSlides')">⬅ Prev</button>
-        <button onclick="nextSlide('airfoilSlides')">Next ➡</button>
+        <button onclick="prevSlide('airfoilSlidesPython')">⬅ Prev</button>
+        <button onclick="nextSlide('airfoilSlidesPython')">Next ➡</button>
       </div>
       <a href=https://github.com/Elijah-Hobbs/nacaAirfoilGeneratorPython>View on Github</a>
     </section>
@@ -281,7 +323,23 @@
     <script>
 
       const slideData = {
-        airfoilSlides: {
+        airfoilSlidesCpp: {
+          slides: [
+            '<img src="nacaAirfoilGeneratorCpp3434Image.png">',
+            '<img src="nacaAirfoilGeneratorCpp0012Image.png">',
+            '<img src="nacaAirfoilGeneratorCppCodeImage.png">'
+          ],
+          index: 0
+        },
+        tbccSlides: {
+          slides: [
+            '<img src="tbccSimulatorRangeImage.png">',
+            '<img src="tbccSimulatorEfficiencyImage.png">',
+            '<img src="tbccSimulatorCycleImage.png">'
+          ],
+          index: 0
+        },
+        airfoilSlidesPython: {
           slides: [
             '<img src="nacaAirfoilGeneratorPython2212Image.png">',
             '<img src="nacaAirfoilGeneratorPython0012Image.png">',
@@ -326,9 +384,11 @@
       }
 
       window.onload = function () {
-        showSlide('airfoilSlides')
-        showSlide('divingSlides')
-        showSlide('iatSlides')
+        showSlide('airfoilSlidesCpp');
+        showSlide('tbccSlides');
+        showSlide('airfoilSlidesPython');
+        showSlide('divingSlides');
+        showSlide('iatSlides');
       }
     </script>
   </body>
